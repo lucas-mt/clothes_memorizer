@@ -1,4 +1,3 @@
-#programa para armazenamento dos produtos da loja virtual Vitrine Online.
 import tkinter as tk
 from tkinter.ttk import *
 from mod_files import *

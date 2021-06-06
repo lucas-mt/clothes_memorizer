@@ -25,13 +25,14 @@ class Armazena:
             aviso.grid(column=1, columnspan=2)
         else:
             try:
-                with open(f'C:\\Users\\Cliente\\OneDrive\\Documentos\\VITRINE online\\armazenamento_{agora.tm_year}\\mes_{agora.tm_mon}\\armazenagem_data_{agora.tm_mday}-{agora.tm_mon}-{agora.tm_year}.txt', 'a+', encoding='utf-8') as arm_peca:
+                with open(f'C:\\Users\\lucas\\OneDrive\\Documentos\\VITRINE online\\armazenamento_{agora.tm_year}\\mes_{agora.tm_mon}\\armazenagem_data_{agora.tm_mday}-{agora.tm_mon}-{agora.tm_year}.txt', 'a+', encoding='utf-8') as arm_peca:
                     arm_peca.write(f'''
                     tipo...............{tipo_}
                     código.............{codigo_}
                     quantidade.........{quantidade_}
                     preço..............R${preco_}
                     valor de compra....R${valor_}
+                    retorno............R${int(quantidade_)*virg(valor_):.2f}
                     total..............R${int(quantidade_)*virg(preco_)}\n''')
                     arm_peca.write('-'*40)
                 aviso = tk.Label()
@@ -63,7 +64,7 @@ class Venda(Armazena):
             aviso.grid(column=1, columnspan=2)
         else:
             try:
-                with open(f'C:\\Users\\Cliente\\OneDrive\\Documentos\\VITRINE online\\venda_{agora.tm_year}\\mes_{agora.tm_mon}\\venda_data_{agora.tm_mday}-{agora.tm_mon}-{agora.tm_year}.txt', 'a+', encoding='utf-8') as arm_peca:
+                with open(f'C:\\Users\\lucas\\OneDrive\\Documentos\\VITRINE online\\venda_{agora.tm_year}\\mes_{agora.tm_mon}\\venda_data_{agora.tm_mday}-{agora.tm_mon}-{agora.tm_year}.txt', 'a+', encoding='utf-8') as arm_peca:
                     arm_peca.write(f'''
                     tipo...............{tipo_}
                     código.............{codigo_}

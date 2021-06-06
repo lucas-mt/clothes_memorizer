@@ -8,7 +8,7 @@ janela = tk.Tk()
 def Janela():
     janela.title('VITRINE Online')
     janela.geometry('320x450')
-    janela.iconbitmap('C:\\Users\\Cliente\\OneDrive\\Documentos\\VITRINE online\\vitrine_ícone-v.ico')
+    #janela.iconbitmap('C:\\Users\\lucas\\OneDrive\\Documentos\\VITRINE online\\vitrine_ícone-v.ico')
 
 #aqui é o título da página
 def Rotulo(msg, col, lin):
@@ -38,7 +38,7 @@ class Est_arm:
             dia_ = self.dia.get()
             mes_ = self.mes.get()
             ano_ = self.ano.get()
-            arq = open(f'C:\\Users\\Cliente\\OneDrive\\Documentos\\VITRINE online\\armazenamento_{ano_}\\mes_{mes_}\\armazenagem_data_{dia_}-{mes_}-{ano_}.txt', 'r', encoding='utf-8')
+            arq = open(f'C:\\Users\\lucas\\OneDrive\\Documentos\\VITRINE online\\armazenamento_{ano_}\\mes_{mes_}\\armazenagem_data_{dia_}-{mes_}-{ano_}.txt', 'r', encoding='utf-8')
             Label(janela, text='Armazenado').grid(column=4, row=1)
             ler_arq = arq.read()
             container = Frame(janela)
@@ -66,7 +66,7 @@ class Est_vnd(Est_arm):
             dia_ = self.dia.get()
             mes_ = self.mes.get()
             ano_ = self.ano.get()
-            arq = open(f'C:\\Users\\Cliente\\OneDrive\\Documentos\\VITRINE online\\venda_{ano_}\\mes_{mes_}\\venda_data_{dia_}-{mes_}-{ano_}.txt', 'r', encoding='utf-8')
+            arq = open(f'C:\\Users\\lucas\\OneDrive\\Documentos\\VITRINE online\\venda_{ano_}\\mes_{mes_}\\venda_data_{dia_}-{mes_}-{ano_}.txt', 'r', encoding='utf-8')
             Label(janela, text='Vendido').grid(column=5, row=1)
             ler_arq = arq.read()
             container = Frame(janela)
