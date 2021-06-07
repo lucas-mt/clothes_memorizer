@@ -9,6 +9,6 @@ This is the 2.0 version of this APP. the 1st version only worked on the command 
 
 I know this APP is a bit horrible and really, really insufficient, but the truth is: I don't know [TKinter](https://docs.python.org/3/library/tkinter.html) yet. But when I get prepared i'll make a better version of it.
 
-If you're gonna use this APP, for now, just remember to update the directory paths registered in the code, as they're from my own computer.
+this APP creates directories using the path (C:\Users\'your_user'\OneDrive\Documents). If this path is different on your computer for now, you should change it directly in the code.
 
 (sorry for my bad english!)

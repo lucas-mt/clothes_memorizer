@@ -1,8 +1,11 @@
 #módulos de cadastramento e informações das peças aramzenadas e vendidas.
 import tkinter as tk
-import time
+import time, os
 from mod_read_files import virg
+from pathlib import Path
 
+os.chdir(f'{Path.home()}/OneDrive/Documentos/VITRINE online')
+home = os.getcwd()
 agora = time.localtime()
 
 class Armazena:
@@ -25,7 +28,7 @@ class Armazena:
             aviso.grid(column=1, columnspan=2)
         else:
             try:
-                with open(f'C:\\Users\\lucas\\OneDrive\\Documentos\\VITRINE online\\armazenamento_{agora.tm_year}\\mes_{agora.tm_mon}\\armazenagem_data_{agora.tm_mday}-{agora.tm_mon}-{agora.tm_year}.txt', 'a+', encoding='utf-8') as arm_peca:
+                with open(f'{home}\\armazenamento_{agora.tm_year}\\mes_{agora.tm_mon}\\armazenagem_data_{agora.tm_mday}-{agora.tm_mon}-{agora.tm_year}.txt', 'a+', encoding='utf-8') as arm_peca:
                     arm_peca.write(f'''
                     tipo...............{tipo_}
                     código.............{codigo_}
@@ -64,7 +67,7 @@ class Venda(Armazena):
             aviso.grid(column=1, columnspan=2)
         else:
             try:
-                with open(f'C:\\Users\\lucas\\OneDrive\\Documentos\\VITRINE online\\venda_{agora.tm_year}\\mes_{agora.tm_mon}\\venda_data_{agora.tm_mday}-{agora.tm_mon}-{agora.tm_year}.txt', 'a+', encoding='utf-8') as arm_peca:
+                with open(f'{home}\\venda_{agora.tm_year}\\mes_{agora.tm_mon}\\venda_data_{agora.tm_mday}-{agora.tm_mon}-{agora.tm_year}.txt', 'a+', encoding='utf-8') as arm_peca:
                     arm_peca.write(f'''
                     tipo...............{tipo_}
                     código.............{codigo_}
@@ -107,3 +110,5 @@ class Deleta(Del_data):
         self.n4.delete(0, 'end')
         self.n5.delete(0, 'end')
         self.n6.delete(0, 'end')
+
+print(home)
