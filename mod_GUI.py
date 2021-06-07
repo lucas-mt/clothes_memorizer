@@ -1,6 +1,10 @@
 #módulo do front-end.
-import tkinter as tk
+import tkinter as tk, os
 from tkinter.ttk import *
+from pathlib import Path
+
+os.chdir(f'{Path.home()}/OneDrive/Documentos')
+home = os.getcwd()
 
 janela = tk.Tk()
 
@@ -8,7 +12,7 @@ janela = tk.Tk()
 def Janela():
     janela.title('VITRINE Online')
     janela.geometry('320x450')
-    #janela.iconbitmap('C:\\Users\\lucas\\OneDrive\\Documentos\\VITRINE online\\vitrine_ícone-v.ico')
+    janela.iconbitmap(f'{home}\\VIT app\\icons\\vitrine_ícone-v.ico')
 
 #aqui é o título da página
 def Rotulo(msg, col, lin):
