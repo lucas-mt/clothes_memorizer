@@ -28,7 +28,7 @@ class Armazena:
             aviso.grid(column=1, columnspan=2)
         else:
             try:
-                with open(f'{home}VITRINE online\\armazenamento_{agora.tm_year}\\mes_{agora.tm_mon}\\armazenagem_data_{agora.tm_mday}-{agora.tm_mon}-{agora.tm_year}.txt', 'a+', encoding='utf-8') as arm_peca:
+                with open(f'{home}\\VITRINE online\\armazenamento_{agora.tm_year}\\mes_{agora.tm_mon}\\armazenagem_data_{agora.tm_mday}-{agora.tm_mon}-{agora.tm_year}.txt', 'a+', encoding='utf-8') as arm_peca:
                     arm_peca.write(f'''
                     tipo...............{tipo_}
                     código.............{codigo_}
